@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/22.14.0-white?logo=node.js&logoColor=white&label=Node.js&labelColor=5FA04E" />
   <img src="https://img.shields.io/badge/^19-white?logo=react&logoColor=white&label=React&labelColor=61DAFB" />
   <img src="https://img.shields.io/badge/5.0.1-white?logo=redux&label=Redux&labelColor=764abc" />
-  <img src="https://img.shields.io/badge/9.2.0-white?logo=redux&label=React Redux&labelColor=764abc" />
+  <img src="https://img.shields.io/badge/9.2.0-white?logo=redux&label=React%20Redux&labelColor=764abc" />
   <img src="https://img.shields.io/github/license/edvein-rin/who-wants-to-be-a-millionaire.svg?color=white" />
 <p>
 
