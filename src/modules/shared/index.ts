@@ -1,1 +1,1 @@
-export { styles } from './lib';
+export { styles } from './utils';
