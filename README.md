@@ -9,20 +9,18 @@
 <p>
 
 <p align="center">
-A simple clicker game to showcase <b>Redux</b> skills.</br>
+A simple cash register challenge game to showcase <b>Redux</b> skills.</br>
 Covers <b>stores</b>, <b>reducers</b>, <b>actions</b>, <b>action creators</b>, <b>selectors</b>, <b>middlewares</b> and <b>thunks</b>.
 </p>
 
-## Details
+## Implemented concepts
 
-I tried to pick a project to showcase all main possibilities of **Redux**.
-
-**Store**: holds current money, money per second, modifiers, etc.  
-**Actions**: add money on click, add money per second.  
+**Store**: holds information about loaded products, current customer, etc.  
+**Actions**: represents cashier actions (add a bill to exchange, remove a bill from exchange, give exchange to customer etc).  
 **Reducers**: a single reducer to operate over all actions.  
-**Selectors**: get current money, get stats for money over time.  
+**Selectors**: get customer basket price, get customer money, get customer change.  
 **Middlewares**: logger.  
-**Thunks**: add money over time.
+**Thunks**: loads products with prices from a free API.
 
 ## Setup
 
