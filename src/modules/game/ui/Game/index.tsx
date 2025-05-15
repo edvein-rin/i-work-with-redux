@@ -12,6 +12,7 @@ import {
   selectCurrentExchange,
   selectIsGameStarted,
 } from '@/modules/store';
+import { ProductList, ProductListItem } from '@/modules/product';
 
 export const Game = () => {
   const dispatch = useAppDispatch();
@@ -47,13 +48,41 @@ export const Game = () => {
         products.length === 0 &&
         'NO PRODUCTS LOADED BECAUSE A FREE API A BAKA DEVELOPER USING IS NOT WORKING ANYMORE :c'}
       {products !== undefined && products.length > 0 && (
-        <div className="text-center">
-          <h1>PRODUCTS</h1>
-          <div className="mt-2">{JSON.stringify(products)}</div>
-          <h2 className="mt-2">CURRENT CUSTOMER</h2>
-          <div className="mt-2">{JSON.stringify(currentCustomer)}</div>
-          <h2 className="mt-2">CURRENT EXCHANGE</h2>
-          <div className="mt-2">{currentExchange}</div>
+        <div className="flex flex-col gap-16">
+          <div>
+            <span>CUSTOMER</span>
+            <div className="flex justify-between gap-4 mt-4">
+              <span>{currentCustomer?.name}</span>
+              <span>${currentCustomer?.money}</span>
+            </div>
+          </div>
+          <div>
+            <span>BASKET</span>
+            <ProductList className="mt-4">
+              {currentCustomer?.products.map((product) => (
+                <ProductListItem
+                  key={product.id}
+                  name={product.name}
+                  price={product.price}
+                />
+              ))}
+            </ProductList>
+            <hr />
+            <div className="flex justify-between gap-4 mt-1">
+              <span>TOTAL</span>
+              <span>?</span>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-between gap-4">
+              <span>NEEDED EXCHANGE</span>
+              <span>?</span>
+            </div>
+            <div className="flex justify-between gap-4">
+              <span>CURRENT EXCHANGE</span>
+              <span>{currentExchange}</span>
+            </div>
+          </div>
         </div>
       )}
     </main>
