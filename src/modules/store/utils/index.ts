@@ -1,6 +1,11 @@
-export { isSetProductsAction } from './actions';
-export type { SetProductsAction } from './actions';
+export { setProducts, startGame } from './actions';
 export { createStore } from './createStore';
-export { initialState } from './initialState';
-export { selectProducts } from './selectors';
-export type { State } from './state';
+export {
+  selectCurrentCustomer,
+  selectCurrentExchange,
+  selectIsGameStarted,
+  selectProducts,
+} from './selectors';
+export { loadProducts } from './thunks';
+export { useAppDispatch } from './useAppDispatch';
+export { useAppSelector } from './useAppSelector';

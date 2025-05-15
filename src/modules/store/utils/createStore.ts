@@ -1,19 +1,9 @@
-import { Action, legacy_createStore } from 'redux';
+import { applyMiddleware, legacy_createStore } from 'redux';
+import { thunk } from 'redux-thunk';
 
-import { isSetProductsAction } from './actions';
-import { initialState } from './initialState';
-
-const storeReducer = (state = initialState, action: Action) => {
-  if (isSetProductsAction(action)) {
-    return {
-      ...state,
-      products: action.payload,
-    };
-  }
-
-  return state;
-};
+import { reducer } from './reducer';
+import { loggerMiddleware } from './middlewares';
 
 export const createStore = () => {
-  return legacy_createStore(storeReducer);
+  return legacy_createStore(reducer, applyMiddleware(thunk, loggerMiddleware));
 };
