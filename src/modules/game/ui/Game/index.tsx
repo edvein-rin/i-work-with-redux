@@ -14,8 +14,7 @@ import {
 import { CustomerCard } from '@/modules/customer';
 import { ReceiptCard } from '@/modules/receipt';
 
-const GAME_LOGO =
-  '    ____                       __               _ __  __       ____           __          \r\n   /  _/  _      ______  _____/ /__   _      __(_) /_/ /_     / __ \\___  ____/ /_  ___  __\r\n   / /   | | /| / / __ \\/ ___/ //_/  | | /| / / / __/ __ \\   / /_/ / _ \\/ __  / / / / |/_/\r\n _/ /    | |/ |/ / /_/ / /  / ,<     | |/ |/ / / /_/ / / /  / _, _/  __/ /_/ / /_/ />  <  \r\n/___/    |__/|__/\\____/_/  /_/|_|    |__/|__/_/\\__/_/ /_/  /_/ |_|\\___/\\__,_/\\__,_/_/|_|  \r\n                                                                                          \r\n\r\n';
+import { GameLogo } from '../GameLogo';
 
 export const Game = () => {
   const dispatch = useAppDispatch();
@@ -46,7 +45,7 @@ export const Game = () => {
         'flex flex-col items-center justify-center gap-16'
       )}
     >
-      <div className="hidden 2xl:block whitespace-pre">{GAME_LOGO}</div>
+      <GameLogo className="hidden 2xl:block" />
       {products === undefined && 'LOADING...'}
       {products !== undefined &&
         products.length === 0 &&
