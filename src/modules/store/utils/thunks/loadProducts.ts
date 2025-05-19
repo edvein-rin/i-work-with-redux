@@ -40,10 +40,18 @@ export const loadProducts = (dispatch: Dispatch<Action>) => {
 
       const products: Product[] = dataParseResult.data.products.map(
         (product) => {
+          const correctedPrice =
+            Math.round(
+              (product.price +
+                faker.number.float({ min: 0, max: 1, fractionDigits: 2 }) +
+                Number.EPSILON) *
+                100
+            ) / 100;
+
           return {
             id: product.id,
             name: product.title,
-            price: product.price + faker.number.float({ min: 0, max: 1 }),
+            price: correctedPrice,
           };
         }
       );

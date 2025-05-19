@@ -44,7 +44,7 @@ export const GameHints = ({ className }: GameHintsProps) => {
             {customerProductsSortedByPrice.map((product, index) => (
               <li key={product.id} className="flex justify-between gap-2">
                 <span>{index !== 0 && '+'}</span>
-                <span>{product.price}</span>
+                <span>{product.price.toFixed(2)}</span>
               </li>
             ))}
           </ul>
@@ -56,12 +56,12 @@ export const GameHints = ({ className }: GameHintsProps) => {
         <div className="flex flex-col">
           <span className="text-right">CHANGE</span>
           <ul className="flex flex-col items-end">
-            <li>{currentCustomer.money}</li>
+            <li>{currentCustomer.money.toFixed(2)}</li>
             <li className="flex justify-between gap-2">
               <span>-</span>
               <span>
                 {isActualTotalEqualToCurrentTotal
-                  ? formatMoney(actualTotal)
+                  ? actualTotal.toFixed(2)
                   : '?'}
               </span>
             </li>
