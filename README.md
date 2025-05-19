@@ -16,7 +16,7 @@ Covers <b>stores</b>, <b>reducers</b>, <b>actions</b>, <b>action creators</b>, <
 ## Implemented concepts
 
 **Store**: holds information about loaded products, current customer, etc.  
-**Actions**: represents cashier actions (add/remove a bill to/from the exchange, give the exchange to the customer, etc).  
+**Actions**: represents cashier actions (add/remove a bill to/from the change, give the change to the customer, etc).  
 **Reducers**: a single reducer to operate over all actions.  
 **Selectors**: get customer basket price, money, and change.  
 **Middlewares**: logger.  
@@ -37,3 +37,7 @@ pnpm install
 ```
 pnpm dev
 ```
+
+## Credits
+
+Cute ASCII faces generated using **Adel Faure ASCII Face Maker** ([itch.io](https://adelfaure.itch.io/ascii-facemaker), [Gitlab](https://gitlab.com/adelfaure/ascii-facemaker)).
