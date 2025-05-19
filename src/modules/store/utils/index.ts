@@ -1,9 +1,21 @@
-export { setProducts, startGame } from './actions';
+export {
+  setProducts,
+  setCurrentChange,
+  setCurrentTotal,
+  startGame,
+} from './actions';
 export { createStore } from './createStore';
 export {
+  selectActualChange,
+  selectCurrentChange,
   selectCurrentCustomer,
-  selectCurrentExchange,
+  selectCurrentCustomerMoney,
+  selectActualTotal,
+  selectCurrentTotal,
   selectIsGameStarted,
+  selectIsGameWon,
+  selectIsActualChangeEqualToCurrentChange,
+  selectIsActualTotalEqualToCurrentTotal,
   selectProducts,
 } from './selectors';
 export { loadProducts } from './thunks';

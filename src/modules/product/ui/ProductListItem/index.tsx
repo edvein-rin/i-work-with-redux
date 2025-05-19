@@ -1,8 +1,9 @@
-import { formatMoney, styles } from '@/modules/shared';
+import { formatMoney, Money } from '@/modules/money';
+import { styles } from '@/modules/shared';
 
 export type ProductListItemProps = {
   name: string;
-  price: number;
+  price: Money;
   className?: string;
 };
 

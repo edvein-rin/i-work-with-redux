@@ -1,4 +1,6 @@
-export { isSetProductsAction, setProducts } from './setProducts';
+export { setCurrentTotal, isSetCurrentTotalAction } from './setCurrentTotal';
+export { setCurrentChange, isSetCurrentChangeAction } from './setCurrentChange';
+export { setProducts, isSetProductsAction } from './setProducts';
 export type { SetProductsAction } from './setProducts';
-export { isStartGameAction, startGame } from './startGame';
+export { startGame, isStartGameAction } from './startGame';
 export type { StartGameAction } from './startGame';

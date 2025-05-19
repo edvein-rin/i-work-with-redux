@@ -5,7 +5,12 @@ import type { Product } from '@/modules/product';
 import { generateCustomerQuote, type Customer } from '@/modules/customer';
 import { generateAsciiFace } from '@/modules/shared';
 
-import { isSetProductsAction, isStartGameAction } from './actions';
+import {
+  isSetCurrentChangeAction,
+  isSetCurrentTotalAction,
+  isSetProductsAction,
+  isStartGameAction,
+} from './actions';
 import { initialState } from './initialState';
 import type { State } from './state';
 
@@ -52,6 +57,21 @@ export const reducer = (state = initialState, action: Action): State => {
       ...state,
       currentCustomer,
       currentChange: 0,
+      currentTotal: 0,
+    };
+  }
+
+  if (isSetCurrentTotalAction(action)) {
+    return {
+      ...state,
+      currentTotal: Math.max(action.payload, 0),
+    };
+  }
+
+  if (isSetCurrentChangeAction(action)) {
+    return {
+      ...state,
+      currentChange: Math.max(action.payload, 0),
     };
   }
 

@@ -8,20 +8,22 @@ import {
   selectProducts,
   startGame,
   selectCurrentCustomer,
-  selectCurrentExchange,
   selectIsGameStarted,
+  selectIsGameWon,
 } from '@/modules/store';
 import { CustomerCard } from '@/modules/customer';
-import { ReceiptCard } from '@/modules/receipt';
 
 import { GameLogo } from '../GameLogo';
+import { GameReceipt } from '../GameReceipt';
+import { GameHints } from '../GameHints';
 
 export const Game = () => {
   const dispatch = useAppDispatch();
+
   const products = useAppSelector(selectProducts);
   const currentCustomer = useAppSelector(selectCurrentCustomer);
-  const currentChange = useAppSelector(selectCurrentExchange);
   const isGameStarted = useAppSelector(selectIsGameStarted);
+  const isGameWon = useAppSelector(selectIsGameWon);
 
   const wasLoadingRequestSentReference = useRef(false);
 
@@ -37,12 +39,20 @@ export const Game = () => {
     }
   }, [dispatch, isGameStarted, products]);
 
+  useEffect(() => {
+    if (isGameWon) {
+      setTimeout(() => {
+        dispatch(startGame());
+      }, 2500);
+    }
+  }, [dispatch, isGameWon]);
+
   return (
     <main
       className={styles(
         'min-w-full min-h-full',
         'p-8',
-        'flex flex-col items-center justify-center gap-16'
+        'flex flex-col items-center justify-center gap-20'
       )}
     >
       <GameLogo className="hidden 2xl:block" />
@@ -51,7 +61,7 @@ export const Game = () => {
         products.length === 0 &&
         'NO PRODUCTS LOADED BECAUSE A FREE API A BAKA DEVELOPER USING IS NOT WORKING ANYMORE :c'}
       {currentCustomer && (
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-32 max-w-full">
+        <div className="flex flex-col 2xl:flex-row items-center gap-16 2xl:gap-32 max-w-full">
           <div className="min-w-0 w-[500px] max-w-full">
             <CustomerCard
               name={currentCustomer.name}
@@ -59,14 +69,21 @@ export const Game = () => {
               quote={currentCustomer.quote}
             />
           </div>
-          <div className="min-w-0 w-[500px] max-w-full">
-            <ReceiptCard
-              products={currentCustomer.products}
-              cash={currentCustomer.money}
-              change={currentChange}
-            />
+          <div
+            className={styles(
+              'flex flex-col gap-8',
+              'min-w-0 w-[500px] max-w-full'
+            )}
+          >
+            <GameReceipt />
+            <span className="text-xs">
+              P.S. If you fill everything right it will be submitted
+              automatically.
+            </span>
           </div>
-          <div className="min-w-0 w-[500px] max-w-full">game-controls</div>
+          <div className="min-w-0 w-[500px] max-w-full">
+            <GameHints />
+          </div>
         </div>
       )}
     </main>

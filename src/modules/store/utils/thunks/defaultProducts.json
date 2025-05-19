@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Essence Mascara Lash Princess",
+    "price": 10.35
+  },
+  {
+    "id": 2,
+    "name": "Eyeshadow Palette with Mirror",
+    "price": 20.11
+  },
+  {
+    "id": 3,
+    "name": "Powder Canister",
+    "price": 15.13
+  },
+  {
+    "id": 4,
+    "name": "Red Lipstick",
+    "price": 13.19
+  },
+  {
+    "id": 5,
+    "name": "Red Nail Polish",
+    "price": 9.95
+  },
+  {
+    "id": 6,
+    "name": "Calvin Klein CK One",
+    "price": 50.99
+  },
+  {
+    "id": 7,
+    "name": "Chanel Coco Noir Eau De",
+    "price": 130
+  },
+  {
+    "id": 8,
+    "name": "Dior J'adore",
+    "price": 90.5
+  },
+  {
+    "id": 9,
+    "name": "Dolce Shine Eau de",
+    "price": 70.2
+  },
+  {
+    "id": 10,
+    "name": "Gucci Bloom Eau de",
+    "price": 80.1
+  },
+  {
+    "id": 11,
+    "name": "Annibale Colombo Bed",
+    "price": 1899
+  },
+  {
+    "id": 12,
+    "name": "Annibale Colombo Sofa",
+    "price": 2500
+  },
+  {
+    "id": 13,
+    "name": "Bedside Table African Cherry",
+    "price": 332
+  },
+  {
+    "id": 14,
+    "name": "Knoll Saarinen Executive Conference Chair",
+    "price": 499.99
+  },
+  {
+    "id": 15,
+    "name": "Wooden Bathroom Sink With Mirror",
+    "price": 799.99
+  },
+  {
+    "id": 16,
+    "name": "Apple",
+    "price": 2
+  },
+  {
+    "id": 17,
+    "name": "Beef Steak",
+    "price": 13.54
+  },
+  {
+    "id": 18,
+    "name": "Cat Food",
+    "price": 9.12
+  },
+  {
+    "id": 19,
+    "name": "Chicken Meat",
+    "price": 10.15
+  },
+  {
+    "id": 20,
+    "name": "Cooking Oil",
+    "price": 5.11
+  },
+  {
+    "id": 21,
+    "name": "Cucumber",
+    "price": 1.69
+  },
+  {
+    "id": 22,
+    "name": "Dog Food",
+    "price": 11.99
+  },
+  {
+    "id": 23,
+    "name": "Eggs",
+    "price": 3.15
+  },
+  {
+    "id": 24,
+    "name": "Fish Steak",
+    "price": 15.15
+  },
+  {
+    "id": 25,
+    "name": "Green Bell Pepper",
+    "price": 1.4
+  },
+  {
+    "id": 26,
+    "name": "Green Chili Pepper",
+    "price": 1.19
+  },
+  {
+    "id": 27,
+    "name": "Honey Jar",
+    "price": 7.66
+  },
+  {
+    "id": 28,
+    "name": "Ice Cream",
+    "price": 5.85
+  },
+  {
+    "id": 29,
+    "name": "Juice",
+    "price": 4.55
+  },
+  {
+    "id": 30,
+    "name": "Kiwi",
+    "price": 2.64
+  }
+]

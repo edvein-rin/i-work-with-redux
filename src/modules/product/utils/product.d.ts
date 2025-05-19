@@ -1,9 +1,11 @@
 import { z } from 'zod';
 
+import { Money } from '@/modules/money';
+
 export type Product = {
   id: number;
   name: string;
-  price: number;
+  price: Money;
 };
 
 export const productSchema = z.object({

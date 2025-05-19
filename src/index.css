@@ -6,6 +6,15 @@
   html {
     font-family: 'Press Start 2P', system-ui, sans-serif;
   }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    appearance: none;
+    -moz-appearance: textfield !important;
+  }
 }
 
 :root {

@@ -1,4 +1,11 @@
+export { selectActualChange } from './selectActualChange';
+export { selectCurrentChange } from './selectCurrentChange';
 export { selectCurrentCustomer } from './selectCurrentCustomer';
-export { selectCurrentChange as selectCurrentExchange } from './selectCurrentExchange';
+export { selectCurrentCustomerMoney } from './selectCurrentCustomerMoney';
+export { selectActualTotal } from './selectActualTotal';
+export { selectCurrentTotal } from './selectCurrentTotal';
+export { selectIsActualTotalEqualToCurrentTotal } from './selectIsActualTotalEqualToCurrentTotal';
+export { selectIsActualChangeEqualToCurrentChange } from './selectIsActualChangeEqualToCurrentChange';
 export { selectIsGameStarted } from './selectIsGameStarted';
+export { selectIsGameWon } from './selectIsGameWon';
 export { selectProducts } from './selectProducts';

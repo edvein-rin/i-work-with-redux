@@ -1,1 +1,1 @@
-export { styles, formatMoney, isDevelopment, generateAsciiFace } from './utils';
+export { styles, isDevelopment, generateAsciiFace } from './utils';
