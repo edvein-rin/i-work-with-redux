@@ -40,4 +40,5 @@ pnpm dev
 
 ## Credits
 
-Cute ASCII faces generated using **Adel Faure ASCII Face Maker** ([itch.io](https://adelfaure.itch.io/ascii-facemaker), [Gitlab](https://gitlab.com/adelfaure/ascii-facemaker)).
+Cute ASCII faces generated using **Adel Faure ASCII Face Maker** ([itch.io](https://adelfaure.itch.io/ascii-facemaker), [Gitlab](https://gitlab.com/adelfaure/ascii-facemaker)).  
+Logo generated using [Text to ASCII Art Generator](https://patorjk.com/software/taag).
