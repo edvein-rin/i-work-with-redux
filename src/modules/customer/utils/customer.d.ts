@@ -4,4 +4,5 @@ export type Customer = {
   name: string;
   money: number;
   products: Product[];
+  asciiImage: string;
 };

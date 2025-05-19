@@ -7,6 +7,7 @@ import type { Customer } from '@/modules/customer';
 import { isSetProductsAction, isStartGameAction } from './actions';
 import { initialState } from './initialState';
 import type { State } from './state';
+import { generateAsciiFace } from '@/modules/shared';
 
 export const reducer = (state = initialState, action: Action): State => {
   if (isSetProductsAction(action)) {
@@ -41,6 +42,7 @@ export const reducer = (state = initialState, action: Action): State => {
 
     const currentCustomer: Customer = {
       name: faker.person.fullName(),
+      asciiImage: generateAsciiFace(),
       products,
       money,
     };

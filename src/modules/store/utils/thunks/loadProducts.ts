@@ -2,9 +2,9 @@ import { Action, Dispatch } from 'redux';
 import { z } from 'zod';
 
 import { Product } from '@/modules/product';
+import { isDevelopment } from '@/modules/shared';
 
 import { setProducts } from '../actions/setProducts';
-import { isDevelopment } from '@/modules/shared/utils';
 
 export const loadProducts = (dispatch: Dispatch<Action>) => {
   if (isDevelopment) {
