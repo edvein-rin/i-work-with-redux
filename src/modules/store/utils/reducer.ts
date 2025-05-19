@@ -2,12 +2,12 @@ import { Action } from 'redux';
 import { faker } from '@faker-js/faker';
 
 import type { Product } from '@/modules/product';
-import type { Customer } from '@/modules/customer';
+import { generateCustomerQuote, type Customer } from '@/modules/customer';
+import { generateAsciiFace } from '@/modules/shared';
 
 import { isSetProductsAction, isStartGameAction } from './actions';
 import { initialState } from './initialState';
 import type { State } from './state';
-import { generateAsciiFace } from '@/modules/shared';
 
 export const reducer = (state = initialState, action: Action): State => {
   if (isSetProductsAction(action)) {
@@ -43,6 +43,7 @@ export const reducer = (state = initialState, action: Action): State => {
     const currentCustomer: Customer = {
       name: faker.person.fullName(),
       asciiImage: generateAsciiFace(),
+      quote: generateCustomerQuote(),
       products,
       money,
     };
@@ -50,7 +51,7 @@ export const reducer = (state = initialState, action: Action): State => {
     return {
       ...state,
       currentCustomer,
-      currentExchange: 0,
+      currentChange: 0,
     };
   }
 

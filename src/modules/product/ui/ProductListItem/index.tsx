@@ -1,4 +1,4 @@
-import { styles } from '@/modules/shared';
+import { formatMoney, styles } from '@/modules/shared';
 
 export type ProductListItemProps = {
   name: string;
@@ -11,8 +11,8 @@ export const ProductListItem = ({
   price,
   className,
 }: ProductListItemProps) => (
-  <li className={styles('flex justify-between gap-4', className)}>
+  <li className={styles('flex justify-between gap-8', className)}>
     <span>{name}</span>
-    <span>${price}</span>
+    <span>{formatMoney(price)}</span>
   </li>
 );

@@ -1,3 +1,3 @@
 import type { State } from '../state';
 
-export const selectCurrentExchange = (state: State) => state.currentExchange;
+export const selectCurrentChange = (state: State) => state.currentChange;

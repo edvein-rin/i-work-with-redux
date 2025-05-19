@@ -5,4 +5,5 @@ export type Customer = {
   money: number;
   products: Product[];
   asciiImage: string;
+  quote: string;
 };
