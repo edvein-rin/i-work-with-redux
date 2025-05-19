@@ -16,12 +16,8 @@ export const ReceiptCard = ({
 }: ReceiptCardProps) => {
   const totalMoney = products.reduce((acc, product) => acc + product.price, 0);
 
-  const storeLogo =
-    "";
-
   return (
     <div className={styles('px-6 py-8 border', className)}>
-      <div className="whitespace-pre">{storeLogo}</div>
       <div className="text-center">RECEIPT</div>
       <ProductList className="mt-6">
         {products.map((product) => (
