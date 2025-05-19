@@ -6,7 +6,7 @@ export const loggerMiddleware: Middleware = (store) => (next) => (action) => {
       ? action.type
       : 'UNKNOWN_ACTION';
   console.group(actionType);
-  console.info('Dispatching', action);
+  console.log('Dispatching', action);
 
   const result = next(action);
 
